@@ -51,7 +51,7 @@
 <body>
 
     <!-- Preloader Start -->
-    <div class="se-pre-con"></div>
+    <div id="mobile" class="se-pre-con"></div>
     <!-- Preloader Ends -->
 
     <!-- Start Header Top 
@@ -634,10 +634,16 @@
     <script src="assets/js/YTPlayer.min.js"></script>
     <script src="assets/js/jquery.nice-select.min.js"></script>
     <script src="assets/js/bootsnav.js"></script>
-    <script src="assets/js/main.js">
+    <script src="assets/js/main.js"></script>
+    <script>
+        
+        if (window.innerWidth < 500) {
 
+            document.getElementById("mobile").style.display = "none";
             
-
+         }
+        </script>
+        <script>
         function sendEmail() {
 
             var email = document.getElementById("email").value;
